@@ -1,0 +1,13 @@
+.avatarImag{
+    width: 250px;
+}
+.home
+{
+    background-color: #1abc9c;
+}
+.icon::before,
+.icon::after {
+    content: " ";
+    border: 3px solid white; 
+    width: 100px;
+}

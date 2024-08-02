@@ -1,0 +1,10 @@
+.about{
+    background-color: #1abc9c;
+    padding: 210px 0px;
+}
+.icon::before,
+.icon::after {
+    content: " ";
+    border: 3px solid white; 
+    width: 100px;
+}

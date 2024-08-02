@@ -1,0 +1,7 @@
+.col-md-4{
+    transition: all 0.5s;
+}
+.col-md-4:hover{
+    cursor: pointer;
+    scale: 1.05 ;
+}

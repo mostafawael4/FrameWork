@@ -1,0 +1,39 @@
+<section class="contact mt-5 py-5">
+    <div class="d-flex flex-column align-items-center ">
+        <h1 class="fw-bold mt-3">CONTACT COMPONENT</h1>
+        <div class="icon d-flex align-items-center mt-2">
+            <i class="fa-solid fa-star px-3"></i>
+        </div>
+    </div>
+    <div class="px-3 mx-auto py-5 form">
+        <form action="">
+            <div class="py-4 position-relative">
+                <input [(ngModel)]="userName" (input)="sendDataName(userName)" type="text" name="userName" placeholder="userName" class="rounded-3 w-100 py-2 px-3">
+                @if (userNameLength > 0) {
+                    <p class="paragraph position-absolute">userName:</p>
+                }
+            </div>
+            <div class="py-4 position-relative">
+                <input [(ngModel)]="userAge" (input)="sendDataAge(userAge)" type="text" name="userAge" placeholder="userAge" class="rounded-3 w-100 py-2 px-3">
+                @if (userAgeLength > 0) {
+                    <p class="paragraph position-absolute">userAge:</p>
+                }
+            </div>
+            <div class="py-4 position-relative">
+                <input [(ngModel)]="userEmail" (input)="sendDataEmail(userEmail)" type="email" name="userEmail" placeholder="userEmail" class="rounded-3 w-100 py-2 px-3">
+                @if (userEmailLength > 0) {
+                    <p class="paragraph position-absolute">userEmail:</p>
+                }
+            </div>
+            <div class="py-4 position-relative">
+                <input [(ngModel)]="userPassword" (input)="sendDataPassword(userPassword)" type="Password" name="userPassword" placeholder="userPassword" class="rounded-3 w-100 py-2 px-3">
+                @if (userPasswordLength > 0) {
+                    <p class="paragraph position-absolute">userPassword:</p>
+                }
+            </div>
+            
+            <button class="btn py-2 px-3 text-white" >Send Message</button>
+        </form>
+    </div>
+
+</section>

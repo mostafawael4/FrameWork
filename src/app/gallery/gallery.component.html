@@ -1,0 +1,32 @@
+<section class="gallery mt-5">
+    <div class="container py-5">
+        <div class="d-flex flex-column align-items-center ">
+            <h1 class="fw-bold mt-3">GALLERY COMPONENT</h1>
+            <div class="icon d-flex align-items-center mt-2">
+                <i class="fa-solid fa-star px-3"></i>
+            </div>
+        </div>
+        <div class="row g4 py-4">
+            @for (product of productList; track $index) {
+                <div class="col-md-4">
+                    <div>
+                        <img [src]="product.pImage" alt="productImage" class="w-100 rounded-3">
+                        <p>{{product.pName}}</p>
+                        <p>{{product.pPrice}}</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="recommend d-flex flex-column align-items-center">
+            <h2 class="fw-bold">Recommended Products</h2>
+            <button #btn class="btn btn-dark">Click Here</button>
+        </div>
+
+    </div>
+</section>
+
+
+@defer (on interaction(btn)) {
+    <app-recommend></app-recommend>
+}

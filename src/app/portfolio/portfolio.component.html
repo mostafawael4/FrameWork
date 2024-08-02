@@ -1,0 +1,35 @@
+<section class="portfolio mt-5">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img [src]="image" alt="modalImage" class="w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container py-5">
+        <div class="d-flex flex-column align-items-center ">
+            <h1 class="fw-bold mt-3">PORTFOLIO COMPONENT</h1>
+            <div class="icon d-flex align-items-center mt-2">
+                <i class="fa-solid fa-star px-3"></i>
+            </div>
+        </div>
+        <div class="row g-4 mt-3">
+            @for (product of products; track $index) {
+                <div class="col-md-4 " data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="sendData(product)">
+                    <div class="position-relative item">
+                        <img [src]="product" alt="portImage" class="w-100 rounded-3">
+                        <div
+                            class="plus position-absolute w-100 h-100 rounded-3 d-flex justify-content-center align-items-center top-0">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

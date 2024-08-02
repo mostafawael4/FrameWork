@@ -1,0 +1,15 @@
+<section class="recommend">
+    <div class="container">
+        <div class="row g-4">
+            @for (product of recommendList; track $index) {
+                <div class="col-md-4">
+                    <div>
+                        <img [src]="product.pImage" alt="image" class="w-100 rounded-3">
+                        <p>{{product.pName}}</p>
+                        <p>{{product.pPrice}}</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
